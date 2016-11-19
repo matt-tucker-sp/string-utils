@@ -6,7 +6,6 @@ import {Demo} from './demo.component';
 @NgModule({
   declarations: [Demo],
   imports: [BrowserModule, StringUtilsModule],
-  bootstrap: [Demo],
-  providers: []
+  bootstrap: [Demo]
 })
 export class DemoModule {}

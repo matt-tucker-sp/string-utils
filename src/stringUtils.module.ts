@@ -1,12 +1,10 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {HelloWorld} from './helloWorld.component';
+import {StringUtilService} from './string-util.service';
 
 @NgModule({
-  declarations: [
-    HelloWorld
-  ],
+  declarations: [],
   imports: [CommonModule],
-  exports: [HelloWorld]
+  providers: [StringUtilService]
 })
 export class StringUtilsModule {}

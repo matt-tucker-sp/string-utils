@@ -1,20 +1,20 @@
 import {Component, Inject} from '@angular/core';
-import {StringUtilService} from '../src/string-util.service';
+import {StringUtilsService} from '../src';
 
 @Component({
   selector: 'demo-app',
   template: '{{spaceString}} converts to {{convert(spaceString)}}'
 })
 export class Demo {
-    public spaceString: String;
-    private stringUtilService: StringUtilService;
+    public spaceString: string;
+    private stringUtils: StringUtilsService;
 
-    constructor(@Inject(StringUtilService) stringUtilService) { 
-        this.spaceString = "This Is A Test"
-        this.stringUtilService = stringUtilService;
+    constructor(@Inject(StringUtilsService) stringUtils: StringUtilsService) {
+        this.spaceString = 'This Is A TEST';
+        this.stringUtils = stringUtils;
     }
 
-    public convert(original) : String {
-        return this.stringUtilService.convertToUnderscoreCase(original);
+    public convert(original: string) : string {
+        return this.stringUtils.convertToUnderscoreCase(original);
     }
 }

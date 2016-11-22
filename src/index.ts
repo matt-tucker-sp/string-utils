@@ -1,2 +1,2 @@
-export * from './stringUtils.module';
-export * from './string-util.service';
+export * from './string-utils.module';
+export * from './string-utils.service';
